@@ -58,7 +58,6 @@ export const getActivity = async (req, res) => {
       where: {
         title: {
           contains: search,
-          mode: "insensitive",
         },
         ...(filters.length > 0 && {
           projectId: {
