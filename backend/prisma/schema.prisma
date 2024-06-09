@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @unique @default(uuid())
+  name      String
+  rate      Float
+  createdAt DateTime @default(now())
+
+  @@map("user")
+}
+
+model Project {
+  id         String     @unique @default(uuid())
+  name       String     @unique
+  createdAt  DateTime   @default(now())
+  activities Activity[]
+
+  @@map("projects")
+}
+
+model Activity {
+  id        String   @unique @default(uuid())
+  title     String
+  project   Project  @relation(fields: [projectId], references: [id])
+  projectId String
+  startDate DateTime
+  endDate   DateTime
+  startTime DateTime
+  endTime   DateTime
+  duration  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  @@map("activity")
+}
