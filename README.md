@@ -1,9 +1,9 @@
 # TimeSheet Management
 
 ## Setup Backend
-* Masuk ke folder backend dan buat file ``` .env ``` cara setting .env sudah saya buat di ``` .env.example ```
-* Setelah semua konfigurasi ``` .env ``` selesai, install semua dependencies yang dibutuhkan
+* install semua dependencies yang dibutuhkan
 ``` npm install ```
+* Masuk ke folder backend dan buat file ``` .env ``` cara setting .env sudah saya buat di ``` .env.example ```
 * Lakukan migrate database ``` npx prisma migrate dev ```
 * Jalankan server ``` npm run dev ```
 
