@@ -1,3 +1,5 @@
 # TimeSheet Management
 
-* Setup Backend
+## Setup Backend
+* Install semua dependencies
+```npm install```
