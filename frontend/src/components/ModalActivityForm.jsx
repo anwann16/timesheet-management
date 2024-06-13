@@ -17,6 +17,7 @@ const ModalActivityForm = ({
   setNotif,
   setMessage,
   setModalProject,
+  setSelectedActivity,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [projects, setProjects] = useState([]);
@@ -67,10 +68,19 @@ const ModalActivityForm = ({
       setMessage("Tambah Kegiatan Success");
       setNotif(true);
     } else {
-      await updateActivyApi(selectedActivity, data);
+      const newData = {
+        title: data.title,
+        projectId: selectedProject.id,
+        startDate: data.startDate,
+        endDate: data.endDate,
+        startTime: data.startTime,
+        endTime: data.endTime,
+      };
+      await updateActivyApi(selectedActivity, newData);
       setModalActivities(false);
       setMessage("Update Kegiatan Success");
       setNotif(true);
+      setSelectedActivity(null);
     }
   };
 

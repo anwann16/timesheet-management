@@ -222,6 +222,7 @@ const ActivityList = () => {
           modalActivities={modalActivities}
           setModalActivities={setModalActivities}
           selectedActivity={selectedActivity}
+          setSelectedActivity={setSelectedActivity}
           setModalProject={setModalProject}
           setNotif={setNotif}
           setMessage={setMessage}
