@@ -236,18 +236,7 @@ const ModalActivityForm = ({
               >
                 Nama Proyek <span className="text-red-500"> *</span>
               </label>
-              {/* <select
-                id="projectId"
-                className="outline-[#2775ec] focus:outline-[#2775ec] border rounded-md py-1 px-2"
-                {...register("projectId")}
-              >
-                <option disabled>Select Project</option>
-                {projects.map((project, index) => (
-                  <option key={index} value={project.id}>
-                    {project.name}
-                  </option>
-                ))}
-              </select> */}
+
               <div className="relative inline-block w-full">
                 <div
                   className="flex justify-between items-center px-4 py-2 border border-gray-300 rounded cursor-pointer"
